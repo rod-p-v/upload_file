@@ -1,7 +1,5 @@
 <?php
 
-//echo$_FILES["file"]["name"];
-
 $dir="uploads/";
 
 $file= $dir.basename($_FILES["file"]["name"]);
@@ -10,7 +8,7 @@ $fileType=strtolower(pathinfo($file,PATHINFO_EXTENSION));
 
 $sizeCheck=getimagesize($_FILES["file"]["tmp_name"]);
 
-//var_dump($size);
+
 if ($sizeCheck != false) {
     $size = $_FILES["file"]["size"];
 
